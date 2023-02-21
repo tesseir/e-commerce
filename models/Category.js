@@ -1,5 +1,4 @@
 const { Model, DataTypes } = require('sequelize');
-
 const sequelize = require('../config/connection.js');
 
 class Category extends Model {}
@@ -18,6 +17,7 @@ Category.init(
       unique: true,
     },
   },
+
   {
     sequelize,
     timestamps: false,
@@ -25,6 +25,7 @@ Category.init(
     underscored: true,
     modelName: 'category',
   }
+
 );
 
 module.exports = Category;
